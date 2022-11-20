@@ -72,14 +72,15 @@ public class DemoController {
         ordersRepository.save(orders);
         return orders.toString();
     }
+
     @RequestMapping(value = "/getorder", method = GET)
     public String getorder(@RequestParam("orderId") Long orderId) {
         List<Orders> ordersList = ordersRepository.findByorderId(orderId);
         return ordersList.toString();
     }
+
     @RequestMapping(value = "/updateOrderStatus", method = GET)
-    public void updateOrderStatus(@RequestParam("orderStatus") String orderStatus,@RequestParam("orderId") Long orderId) {
-       int status = ordersRepository.updateOrderStatusByOrderID(orderStatus,orderId);
-        return ;
+    public void updateOrderStatus(@RequestParam("orderStatus") String orderStatus, @RequestParam("orderId") Long orderId) {
+        int status = ordersRepository.updateOrderStatusByOrderID(orderStatus, orderId);
     }
 }

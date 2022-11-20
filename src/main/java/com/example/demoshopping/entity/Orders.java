@@ -15,15 +15,8 @@ import javax.persistence.*;
 @Table(name = "shop_orders", uniqueConstraints = @UniqueConstraint(name = "orderId_unique", columnNames = "orderId"))
 public class Orders {
     @Id
-    @SequenceGenerator(
-            name = "orderId_sequence",
-            sequenceName = "orderId_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "orderId_sequence"
-    )
+    @SequenceGenerator(name = "orderId_sequence", sequenceName = "orderId_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderId_sequence")
     private Long orderId;
     private String Quantity;
     private String productId;
