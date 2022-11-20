@@ -1,0 +1,8 @@
+http://localhost:8080/getproductbyname?name=chips1
+http://localhost:8080/getproductbyId?id=1
+http://localhost:8080/saveproduct?name=chips2&price=2.00&desc=%22chipsbig%22&quantity=1
+http://localhost:8080/savecustomer?firstname=umesh&lastname=%22Agarwal%22&email=%22umesh.agarwal@gmail.com%22&phone=%22123333%22
+http://localhost:8080/getcustomerbyemail?email=%22umesh.agarwal@gmail.com%22
+http://localhost:8080/createorder?products=8,7&quantitys=4,3&customerid=1
+http://localhost:8080/getorder?orderId=6
+http://localhost:8080/updateOrderStatus?orderId=1&orderStatus=CANCELED
